@@ -1,0 +1,752 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Trang chủ tiêu để */
+.header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 2em;
+    color: rgb(68,60,60);
+    cursor: default;
+}
+.header span{
+    color: orange;
+}
+ul li{
+    position: relative;
+    display: inline-block;
+}
+ul a:hover{
+    transition: box-shadow .4s, color .3s;
+    box-shadow: 0 3px orange;
+}
+ul li:hover .dropdown{
+    display: block;
+    background-color: orange;
+    top: 100%;
+    left: 0;
+}
+ul li a{
+    display:  block;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.3em;
+    color: rgb(68,60,60);
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.dropdown{
+    min-width: 200px;
+    position: absolute;
+    display: none;
+    border-radius: 10px;
+}
+.dropdown li{
+    width: 100%;
+}
+.dropdown li a{
+    color: white;
+    font-size: 1.1em;
+}
+.dropdown li a:hover{
+    color: orange;
+    background-color: white;
+}
+.login{
+    color: white;
+    text-decoration: none;
+    padding: 8px 35px;
+    background-color: orange;
+    border-radius: 10px;
+    border: 2px solid orange;
+    font-weight: 500;
+    transition: 0.3s;
+    max-height: 40px;
+    /* cursor: default; */
+}
+.login:hover{
+    color: orange;
+    background-color: transparent;
+}
+#toggle, .header label{
+    display: none;
+}
+
+/* Phần slide ảnh mở đầu */
+#tieude-1{
+    text-align: center;
+    margin-top: 10%;
+    color: orange;
+}
+.container{
+    padding: 2rem;
+}
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+main{
+    margin: 0 80px 0 80px;
+}
+
+/* Phần ưu đãi */
+main h1, p{
+    padding: 10px;
+}
+main p{
+    font-size: larger;
+}
+.preferential-spring{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 15px;
+}
+.preferential-spring .box-img .image{
+    width: calc(280px);
+    height: calc(400px);
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+.preferential-spring .box-img:hover .image{
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+.preferential-spring .box-img{
+    position: relative;
+}
+.preferential-spring .box-img span{
+    position: absolute;
+    top: 70%;
+    color: white;
+    padding: 20px;
+}
+.preferential-spring .box-img:hover span{
+    transform: scale(1.1);
+    z-index: 5;
+    transition: all .2s ease-in-out;
+}
+.preferential-spring .box-img span h3{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+.preferential-spring .box-img span p{
+    font-size: 1.1em;
+    text-align: inherit;
+}
+
+/* Phần điểm đến yêu thích */
+.loving-destination{
+    display: grid;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 190px 190px 190px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+#item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.loving-destination #item1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+#item2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.loving-destination #item2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+.loving-destination #item3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+#item4{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.loving-destination #item4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+#item5{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.loving-destination #item5 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+}
+.loving-destination .boxes-img{
+    position: relative;
+}
+.loving-destination .boxes-img span{
+    top: 50%;
+    position: absolute;
+    color: white;
+    margin-left: 20px;
+}
+.loving-destination #item2 span{
+    top: 75%;
+    margin-left: 20px;
+}
+.loving-destination #item4 span{
+    top: 75%;
+    margin-left: 20px;
+}
+.loving-destination .boxes-img:hover span{
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+/* Phần ảnh voucher */
+#vc{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.voucher-ticket{
+    padding: 0 calc(15%);
+    margin-bottom: 30px;
+}
+.pricing-table {
+    display: flex;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.card{
+    width: 250px;
+    height: 430px;  
+    box-shadow: 2px 2px 46px -4px #00000099;
+    padding: 30px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+.type{
+    margin-top: 30px;
+    letter-spacing: 0.1rem;
+    font:inherit;
+}
+.price{
+    font-size: 7.5rem;
+    position: relative;
+    margin: 10px 0 20px;
+    z-index: 2;
+}
+.price::before{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.06);
+    font-size: 9.5rem;
+    z-index: -1;
+    right: -30%;
+    bottom: 15%;
+    text-shadow: 0 0 0px rgba(51, 55, 69, 0);
+    transition: all 1s ease-in-out;
+}
+.price span{
+    font-size: 1.8rem;
+    position: absolute;
+    left: -15%;
+    top: 65%;
+}
+.card:nth-child(1){
+    width: 260px;
+    background: linear-gradient(to left, #91eae4, #868ae7, #7f7fd5);
+}
+.card:nth-child(1) .price::before{
+    content: "%20";
+}
+.card:nth-child(2){
+    margin: 0 30px;
+    width: 270px;
+    height: 460px;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+.card:nth-child(2) .price::before{
+    content: "%50";
+}
+.card:nth-child(3){
+    background: #00b09b;
+    background: linear-gradient(to right, #96c93d, #00b09b);
+}
+.card:nth-child(3) .price::before{
+    content: "%100";
+}
+.card:nth-child(1) .price, .card:nth-child(3) .price{
+    font-size: 6rem;
+}
+.plan{
+    font-size: 1.3rem;
+    position: relative;
+    margin-bottom: 10px;
+}
+.plan::before, .plan::after{
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: #fff;
+    bottom: 40%;
+    transition: all 0.2s ease-out;
+}
+.plan::before{
+    right: 100%;
+    transform: translate(-50%, -50%);
+}
+.plan::after{
+    right: -60%;
+    transform: translate(0%, -50%);
+}
+.details {
+    text-transform: capitalize;
+    list-style: none;
+    text-align: center;
+}
+.details li{
+    margin: 15px 0px;
+}
+.buy-button{
+    cursor: pointer;
+    width: 250px;
+    height: 180px;
+    background: #fff;
+    border-radius: 15%;
+    position: absolute;
+    right: -34%;
+    bottom: -27%;
+    transition: all 0.4s ease-in-out;
+}
+.buy-button h3{
+    color: #333745;
+    text-align: 0 0 0;
+    text-decoration: none;
+    position: absolute;
+    left: 8%;
+    top: 10%;
+    font-size: 1.2rem;
+    transition: all 0.4s ease-in-out;
+}
+.card:nth-child(1) .buy-button, .card:nth-child(3) .buy-button{
+    width: 250px;
+    height: 170px;
+}
+.card:nth-child(1) .buy-button h3, .card:nth-child(3) .buy-button h3{
+    top: 12%;
+    left: 10%;
+    font-size: 1rem;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+.card:hover .price::before{
+    animation: text-hover 1s ease-in-out infinite normal;
+}
+.card:hover .plan::before{
+    right: 90%;
+}
+.card:hover .plan::after{
+    right: -50%;
+}
+.card:hover .buy-button {
+    width: 100%;
+    right: 0%;
+    border-radius: 0%;
+}
+.card:hover .buy-button h3{
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+@keyframes text-hover{
+    0% {
+        right: -30%;
+    }
+    50% {
+        right: -37%;
+    }
+    100% {
+        right: -30%;
+    }
+}
+
+/* Phần giới thiệu khách sạn */
+.con{
+    max-width: 55rem;
+    margin: 0 auto;
+}
+.slide-wrap{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+}
+.sli{
+    aspect-ratio: 16/9;
+    position: relative;
+}
+.sli img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-position: center;
+    object-fit: cover;
+    transition: all .7s ease-in-out;
+}
+.sli .nav{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.sli .nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 8em;
+    padding: 0 20px;
+    z-index: 100;
+    transition: opacity .2s;
+}
+.next{
+    position: absolute;
+    right: 0;
+}
+.sli p{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 20px;
+    width: 250px;
+    color: white;
+    background-color: #3f3f3f80;
+}
+.sli p a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Phần review ẩm thực */
+.food{
+    width: 100%;
+    background-image: url(image/Am-thuc-noi-tieng-Mexico-1536x1024.jpg);
+    height: 400px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.food .ex{
+    width: 50%;
+    background-color: #2a2a2b73;
+    color: white;
+    height: 400px;
+    padding: 80px 40px;
+}
+.food .ex h1{
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.food .ex p{
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+}
+.food .ex a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: coral;
+    text-transform: uppercase;
+}
+.food .ex a:hover{
+    transition: all .2s ease-in-out;
+    border-radius: 10px ;
+}
+
+/* Phần cam kết */
+.cm{
+    width: 100%;
+    height: 400px;
+    background-image: url(image/paris.jpg);
+    background-position: center;
+    color: white;
+    position: relative;
+    margin-top: 40px;
+}
+.cm h2{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 2.5em;
+}
+.reason{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+}
+.block-reason{
+    width: calc(15%);
+    text-align: center;
+    background-color: rgba(116, 113, 113, 0.288);
+    padding: 10px;
+}
+.block-reason .icon{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.block-reason .text h5{
+    font-size: 1.4em;
+}
+.block-reason .text p{
+    font-size: 1.1em;
+}
+
+/* phần... */
+.respon{
+    width: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 0;
+    background-color: aliceblue;
+}
+.respon .box-respon{
+    width: calc(20%);
+    float: left;
+}
+.box-respon p:nth-child(1){
+    font-size: 1.9em;
+}
+.box-respon p:nth-child(3){
+    color: red;
+}
+
+/* Phần chân trang */
+footer{
+    background-image: url(image/foot.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-columns: 45% 25% 30%;
+    padding: 30px 80px;
+    color: white;
+}
+#footer-about{
+    padding: 10px;
+}
+#footer-about i{
+    padding-right: 10px;
+}
+#footer-about #company{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#footer-about p span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-style: inherit;
+}
+#footer-certificate{
+    padding: 10px;
+    align-content: space-around;
+}  
+#footer-certificate #cer{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#footer-certificate p img{
+    width: 60%;
+    margin-left:5%;
+}
+#footer-contact{
+    padding: 10px;
+}
+#footer-contact #title-contact{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#footer-contact form{
+    margin-top: 10px;
+    padding: 0;
+    border: 1px solid black;
+}
+#footer-contact form #email{
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    float: left;
+    border: none;
+    background-color: white;
+}
+#footer-contact form button{
+    font-size: 1.3em;
+    height: 40px;
+    width: 20%;
+    display: block;
+    border: none;
+    margin: 0;
+    background-color: white;
+    cursor: pointer;
+}
+#footer-contact form button:hover{
+    color: orange;
+}
+
+@media screen and (max-width: 768px) {
+    .preferential-spring{
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+    .card{
+        padding: 0;
+        margin: 0;
+    }
+    .header nav{
+        padding: 20px 40px;
+    }
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .window-menu{
+        margin-right: 40px;
+        display: block;
+    }
+    label{
+        font-size: 1.5em;
+    }
+    #navbar{
+        position: fixed;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        left: 0;
+        transition: all .8s;
+    }
+    #navbar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #navbar ul li a{
+        font-size: 15px;
+    }
+    .header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggle:checked ~ #navbar{
+        max-height: 100%;
+        background-color: white;
+    }
+    #tieude-1{
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Trang chủ tiêu để */
+.header nav {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: rgb(68, 60, 60);
+    cursor: default;
+}
+
+.header span {
+    color: orange;
+}
+
+ul li {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+
+ul a:hover {
+    transition: box-shadow .4s, color .3s;
+    box-shadow: 0 3px orange;
+}
+
+ul li:hover .dropdown {
+    display: block;
+    background-color: orange;
+    top: 100%;
+    left: 0;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.3em;
+    color: rgb(68, 60, 60);
+    font-weight: 500;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.dropdown {
+    min-width: 200px;
+    position: absolute;
+    display: none;
+    border-radius: 10px;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    color: white;
+    font-size: 1.1em;
+}
+
+.dropdown li a:hover {
+    color: orange;
+    background-color: white;
+}
+
+.login {
+    color: white;
+    text-decoration: none;
+    padding: 8px 35px;
+    background-color: orange;
+    border-radius: 10px;
+    border: 2px solid orange;
+    font-weight: 500;
+    transition: 0.3s;
+    max-height: 40px;
+    /* cursor: default; */
+}
+
+.login:hover {
+    color: orange;
+    background-color: transparent;
+}
+
+#toggle,
+.header label {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header nav {
+        padding: 20px 40px;
+    }
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .window-menu {
+        margin-right: 40px;
+        display: block;
+    }
+
+    label {
+        font-size: 1.5em;
+    }
+
+    #navbar {
+        position: fixed;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        top: 60px;
+        left: 0;
+        transition: all .8s;
+    }
+
+    #navbar ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #navbar ul li a {
+        font-size: 15px;
+    }
+
+    .header label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggle:checked~#navbar {
+        max-height: 100%;
+        background-color: white;
+    }
+}
+
+#bg{
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    object-fit: cover;
+    position: relative;
+}
+.lg{
+    padding-top: 30px;
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.lg div{
+    font-size: 1.8em;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid rgb(255, 115, 0);
+    border-radius: 100%;
+}
+.lg div a{
+    text-decoration: none;
+}
+
+/* Phần biểu mẫu thông tin */
+main {
+    margin: 0 40px;
+}
+
+main #til {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+main #til h1 {
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main #til p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+
+main form {
+    width: calc(70%);
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+main form .form-input {
+    display: inline-block;
+    width: calc(100%);
+    height: calc(50px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+main form .form-label {
+    font-size: 1.2em;
+}
+
+main form #content {
+    height: calc(100px);
+}
+
+main form #submit {
+    margin: 0 auto;
+    display: block;
+    width: calc(15%);
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: none;
+    height: calc(40px);
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+}
+
+main form #submit:hover {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}
+
+.map iframe {
+    margin: 30px 0;
+    /* background-image: url(image/map.png); */
+    width: calc(100%);
+    height: calc(300px);
+}
+
+/* Phần liên hệ */
+.contact{
+    margin: 30px auto;
+    width: 70%;
+    background-color: rgb(255, 115, 0);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: none;
+}
+.nav-contact{
+    width: calc(30%);
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px;
+}
+.icon{
+    font-size: 1.3em;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 1px solid rgb(255, 115, 0);
+    padding: 10px;
+    border-radius: 100%;
+}
+.text h5{
+    font-size: 0.9em;
+}
+.text p{
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Phần chân trang */
+footer {
+    background-image: url(image/foot.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-columns: 45% 25% 30%;
+    padding: 30px 80px;
+    color: white;
+}
+
+#footer-about {
+    padding: 10px;
+}
+
+#footer-about #company {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#footer-about #company p:nth-child(2),p:nth-child(3),p:nth-child(4),p:nth-child(5){
+    margin-top: 20px;
+}
+#footer-about p span {
+    font-size: 20px;
+    font-style: inherit;
+}
+
+#footer-about i {
+    padding-right: 10px;
+}
+
+#footer-certificate {
+    padding: 10px;
+    align-content: space-around;
+}
+
+#footer-certificate #cer {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#footer-certificate p img {
+    width: 60%;
+    margin-left: 5%;
+}
+
+#footer-contact {
+    padding: 10px;
+}
+
+#footer-contact #title-contact {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#footer-contact form {
+    margin-top: 10px;
+    padding: 0;
+    border: 1px solid black;
+}
+
+#footer-contact form #email {
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    float: left;
+    border: none;
+    background-color: white;
+}
+
+#footer-contact form button {
+    height: 40px;
+    width: 20%;
+    display: block;
+    border: none;
+    font-size: 1.3em;
+    margin: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+#footer-contact form button:hover {
+    color: orange;
+}
